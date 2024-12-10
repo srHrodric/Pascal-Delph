@@ -1,0 +1,211 @@
+object Form1: TForm1
+  Left = 136
+  Top = 45
+  Width = 636
+  Height = 479
+  VertScrollBar.Range = 466
+  HorzScrollBar.Range = 626
+  ActiveControl = BitBtn1
+  Caption = 'Cadastro de Clientes'
+  Color = clBackground
+  OnCreate = FormCreate
+  PixelsPerInch = 75
+  TextHeight = 13
+  TextWidth = 6
+  object DBNavigator1: TDBNavigator
+    Left = 135
+    Top = 395
+    Width = 330
+    Height = 36
+    DataSource = DataSource1
+    Flat = True
+    Hints.Strings = (
+      'Primeiro Registro'
+      'Registro Anterior'
+      'Pr'#243'ximo Registro'
+      #218'ltimo Registro'
+      'Novo Registro'
+      'Apagar Registro'
+      'Editar Registro'
+      'Gravar Registro'
+      'Cancelar Registro'
+      'Atualizar Registro')
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+  end
+  object BitBtn1: TBitBtn
+    Left = 255
+    Top = 435
+    Width = 111
+    Height = 31
+    TabOrder = 1
+    Kind = bkClose
+  end
+  object DBGrid1: TDBGrid
+    Left = 5
+    Top = 55
+    Width = 621
+    Height = 216
+    DataSource = DataSource1
+    TabOrder = 2
+    TitleFont.Color = clBlack
+    TitleFont.Height = 11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Style = []
+    TitleFont.Weight = 40
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'Codigo'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Nome'
+        Visible = True
+      end
+      item
+        Color = clInfoBk
+        Expanded = False
+        FieldName = 'Estado'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Endereco'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Cidade'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Fone'
+        Visible = True
+      end>
+  end
+  object RadioButton1: TRadioButton
+    Left = 25
+    Top = 290
+    Width = 113
+    Height = 17
+    Caption = 'SP'
+    TabOrder = 3
+    OnClick = RadioButton1Click
+  end
+  object RadioButton2: TRadioButton
+    Left = 25
+    Top = 320
+    Width = 113
+    Height = 17
+    Caption = 'MG'
+    TabOrder = 4
+    OnClick = RadioButton2Click
+  end
+  object RadioButton3: TRadioButton
+    Left = 25
+    Top = 350
+    Width = 113
+    Height = 17
+    Caption = 'Todos'
+    TabOrder = 5
+    OnClick = RadioButton3Click
+  end
+  object Edit1: TEdit
+    Left = 170
+    Top = 285
+    Width = 100
+    Height = 21
+    TabOrder = 6
+  end
+  object Button1: TButton
+    Left = 285
+    Top = 285
+    Width = 96
+    Height = 26
+    Caption = 'Filtrar'
+    TabOrder = 7
+    OnClick = Button1Click
+  end
+  object Edit2: TEdit
+    Left = 400
+    Top = 285
+    Width = 100
+    Height = 21
+    TabOrder = 8
+  end
+  object Button2: TButton
+    Left = 515
+    Top = 285
+    Width = 111
+    Height = 26
+    Caption = 'Localizar C'#243'digo'
+    TabOrder = 9
+    OnClick = Button2Click
+  end
+  object Edit3: TEdit
+    Left = 400
+    Top = 320
+    Width = 100
+    Height = 21
+    TabOrder = 10
+    OnChange = Button3Click
+  end
+  object Button3: TButton
+    Left = 515
+    Top = 320
+    Width = 111
+    Height = 26
+    Caption = 'Localizar Nome'
+    TabOrder = 11
+    OnClick = Button3Click
+  end
+  object ClientDataSet1: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    AfterPost = ClientDataSet1AfterPost
+    Left = 60
+    Top = 20
+    Data = {
+      D90000009619E0BD010000001800000006000000000003000000D90006436F64
+      69676F040001000200010007535542545950450200490008004175746F696E63
+      00044E6F6D65010049000000010005574944544802000200320008456E646572
+      65636F0100490000000100055749445448020002005000064369646164650100
+      4900000001000557494454480200020028000645737461646F01004900000001
+      0005574944544802000200020004466F6E650100490000000100055749445448
+      020002000F0001000C4155544F494E4356414C55450400010001000000}
+    object ClientDataSet1Codigo: TAutoIncField
+      FieldName = 'Codigo'
+    end
+    object ClientDataSet1Nome: TStringField
+      FieldName = 'Nome'
+      Size = 50
+    end
+    object ClientDataSet1Endereco: TStringField
+      FieldName = 'Endereco'
+      Size = 80
+    end
+    object ClientDataSet1Cidade: TStringField
+      FieldName = 'Cidade'
+      Size = 40
+    end
+    object ClientDataSet1Estado: TStringField
+      FieldName = 'Estado'
+      Size = 2
+    end
+    object ClientDataSet1Fone: TStringField
+      FieldName = 'Fone'
+      Size = 15
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = ClientDataSet1
+    Left = 30
+    Top = 20
+  end
+end

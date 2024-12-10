@@ -1,0 +1,50 @@
+object Form1: TForm1
+  Left = 253
+  Top = 220
+  Width = 448
+  Height = 282
+  VertScrollBar.Range = 246
+  HorzScrollBar.Range = 291
+  ActiveControl = Button1
+  Caption = 'Mensagem'
+  Color = clBackground
+  PixelsPerInch = 75
+  TextHeight = 13
+  TextWidth = 6
+  object Button1: TButton
+    Left = 150
+    Top = 35
+    Width = 141
+    Height = 46
+    Caption = 'Mostrar Mensagem'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 150
+    Top = 90
+    Width = 141
+    Height = 46
+    Caption = 'Mensagem Melhorada'
+    TabOrder = 1
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 150
+    Top = 145
+    Width = 141
+    Height = 46
+    Caption = 'Mensagem Com Retorno'
+    TabOrder = 2
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Left = 150
+    Top = 200
+    Width = 141
+    Height = 46
+    Caption = 'Caixa de Entrada'
+    TabOrder = 3
+    OnClick = Button4Click
+  end
+end

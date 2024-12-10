@@ -1,0 +1,178 @@
+object Form1: TForm1
+  Left = 192
+  Top = 107
+  Width = 543
+  Height = 351
+  VertScrollBar.Range = 337
+  HorzScrollBar.Range = 513
+  ActiveControl = DBGrid1
+  Caption = 'DBExpress'
+  Color = clBackground
+  PixelsPerInch = 96
+  TextHeight = 13
+  TextWidth = 6
+  object DBGrid1: TDBGrid
+    Left = 24
+    Top = 160
+    Width = 489
+    Height = 177
+    DataSource = DataSource2
+    TabOrder = 0
+    TitleFont.Color = clBlack
+    TitleFont.Height = 11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Style = []
+    TitleFont.Weight = 40
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 88
+    Top = 48
+    Width = 360
+    Height = 35
+    DataSource = DataSource1
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 64
+    Top = 96
+    Width = 33
+    Height = 13
+    Caption = 'C'#243'digo'
+  end
+  object Label2: TLabel
+    Left = 48
+    Top = 128
+    Width = 48
+    Height = 13
+    Caption = 'Descri'#231#227'o'
+  end
+  object DBEdit1: TDBEdit
+    Left = 104
+    Top = 88
+    Width = 101
+    Height = 21
+    DataField = 'COD_ESTILO'
+    DataSource = DataSource1
+    TabOrder = 4
+  end
+  object DBEdit2: TDBEdit
+    Left = 104
+    Top = 120
+    Width = 101
+    Height = 21
+    DataField = 'DESCRICAO'
+    DataSource = DataSource1
+    TabOrder = 5
+  end
+  object DBNavigator2: TDBNavigator
+    Left = 224
+    Top = 96
+    Width = 240
+    Height = 27
+    DataSource = DataSource2
+    TabOrder = 6
+  end
+  object SQLConnection1: TSQLConnection
+    Connected = True
+    ConnectionName = 'DelphiFacil'
+    DriverName = 'Interbase'
+    GetDriverFunc = 'getSQLDriverINTERBASE'
+    LibraryName = 'dbexpint.dll'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverName=Interbase'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'Database=c:\ProjDelphi6\Locadora.gdb'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Password=masterkey'
+      'RoleName=RoleName'
+      'ServerCharSet='
+      'SQLDialect=1'
+      'Interbase TransIsolation=ReadCommited'
+      'User_Name=sysdba'
+      'WaitOnLocks=True')
+    VendorLib = 'GDS32.DLL'
+    Left = 24
+    Top = 16
+  end
+  object SQLClientDataSet1: TSQLClientDataSet
+    Active = True
+    CommandText = 'select * from ESTILOS'
+    Aggregates = <>
+    Options = [poAllowCommandText]
+    ObjectView = True
+    Params = <>
+    AfterPost = SQLClientDataSet1AfterPost
+    OnNewRecord = SQLClientDataSet1NewRecord
+    DBConnection = SQLConnection1
+    Left = 80
+    Top = 16
+    object SQLClientDataSet1COD_ESTILO: TIntegerField
+      FieldName = 'COD_ESTILO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object SQLClientDataSet1DESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Size = 52
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLClientDataSet1
+    Left = 120
+    Top = 16
+  end
+  object SQLClientDataSet2: TSQLClientDataSet
+    Active = True
+    CommandText = 'select * from FITAS'
+    Aggregates = <>
+    IndexFieldNames = 'COD_ESTILO'
+    MasterFields = 'COD_ESTILO'
+    MasterSource = DataSource1
+    Options = [poAllowCommandText]
+    ObjectView = True
+    PacketRecords = 0
+    Params = <
+      item
+        DataType = ftInteger
+        Name = 'COD_ESTILO'
+        ParamType = ptInput
+        Size = 4
+        Value = 2
+      end>
+    AfterPost = SQLClientDataSet2AfterPost
+    OnNewRecord = SQLClientDataSet2NewRecord
+    DBConnection = SQLConnection1
+    Left = 176
+    Top = 16
+    object SQLClientDataSet2COD_FITA: TIntegerField
+      FieldName = 'COD_FITA'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object SQLClientDataSet2DESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Size = 42
+    end
+    object SQLClientDataSet2OBSERVACAO: TStringField
+      FieldName = 'OBSERVACAO'
+      Size = 102
+    end
+    object SQLClientDataSet2DATA_CAD: TSQLTimeStampField
+      FieldName = 'DATA_CAD'
+    end
+    object SQLClientDataSet2TEMPO_DURA: TStringField
+      FieldName = 'TEMPO_DURA'
+      Size = 7
+    end
+    object SQLClientDataSet2COD_ESTILO: TIntegerField
+      FieldName = 'COD_ESTILO'
+    end
+  end
+  object DataSource2: TDataSource
+    DataSet = SQLClientDataSet2
+    Left = 248
+    Top = 16
+  end
+end

@@ -1,0 +1,97 @@
+object Form1: TForm1
+  Left = 289
+  Top = 203
+  Width = 581
+  Height = 337
+  HorzScrollBar.Range = 511
+  VertScrollBar.Range = 286
+  Caption = 'Copiando Propriedades, Aproveitando C'#243'digo'
+  Color = clBackground
+  PixelsPerInch = 75
+  TextHeight = 15
+  TextWidth = 7
+  object Shape1: TShape
+    Left = 285
+    Top = 135
+    Width = 226
+    Height = 91
+    Pen.Width = 0
+    Shape = stRoundRect
+    OnDragDrop = Shape1DragDrop
+    OnDragOver = Shape4DragOver
+  end
+  object Shape2: TShape
+    Left = 315
+    Top = 200
+    Width = 71
+    Height = 76
+    Pen.Width = 0
+    Shape = stCircle
+    OnDragDrop = Shape2DragDrop
+    OnDragOver = Shape4DragOver
+  end
+  object Shape3: TShape
+    Left = 410
+    Top = 200
+    Width = 71
+    Height = 76
+    Pen.Width = 0
+    Shape = stCircle
+    OnDragDrop = Shape3DragDrop
+    OnDragOver = Shape4DragOver
+  end
+  object Shape4: TShape
+    Left = 315
+    Top = 85
+    Width = 156
+    Height = 61
+    Pen.Width = 0
+    Shape = stRoundRect
+    OnDragDrop = Shape4DragDrop
+    OnDragOver = Shape4DragOver
+  end
+  object Label1: TLabel
+    Left = 20
+    Top = 35
+    Width = 141
+    Height = 26
+    AutoSize = False
+    Caption = 'Azul'
+    Color = clBlue
+    DragMode = dmAutomatic
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 20
+    Top = 95
+    Width = 141
+    Height = 36
+    AutoSize = False
+    Caption = 'Verde'
+    Color = clGreen
+    DragMode = dmAutomatic
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 20
+    Top = 175
+    Width = 146
+    Height = 41
+    AutoSize = False
+    Caption = 'Vermelho'
+    Color = clRed
+    DragMode = dmAutomatic
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 20
+    Top = 250
+    Width = 146
+    Height = 36
+    AutoSize = False
+    Caption = 'Amarelo'
+    Color = clYellow
+    DragMode = dmAutomatic
+    ParentColor = False
+  end
+end

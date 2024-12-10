@@ -1,0 +1,36 @@
+object Form1: TForm1
+  Left = 267
+  Top = 204
+  Width = 557
+  Height = 272
+  HorzScrollBar.Range = 321
+  VertScrollBar.Range = 186
+  Caption = 'Vari'#225'vel'
+  Color = clBackground
+  PixelsPerInch = 75
+  TextHeight = 15
+  TextWidth = 7
+  object Button1: TButton
+    Left = 205
+    Top = 140
+    Width = 116
+    Height = 46
+    Caption = 'Mudar Valores'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object Label1: TLabel
+    Left = 230
+    Top = 60
+    Width = 58
+    Height = 15
+    Caption = 'Variavel 1'
+  end
+  object Label2: TLabel
+    Left = 230
+    Top = 100
+    Width = 58
+    Height = 15
+    Caption = 'Variavel 2'
+  end
+end

@@ -1,0 +1,29 @@
+object Form1: TForm1
+  Left = 133
+  Top = 158
+  Width = 529
+  Height = 221
+  VertScrollBar.Range = 116
+  HorzScrollBar.Range = 341
+  ActiveControl = Button1
+  Caption = 'Imprimir Arquivo'
+  Color = clBackground
+  PixelsPerInch = 75
+  TextHeight = 13
+  TextWidth = 6
+  object Button1: TButton
+    Left = 160
+    Top = 85
+    Width = 181
+    Height = 31
+    Caption = 'Imprimir'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = '*.txt'
+    Title = 'Open'
+    Left = 65
+    Top = 40
+  end
+end

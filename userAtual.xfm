@@ -1,0 +1,21 @@
+object Form1: TForm1
+  Left = 344
+  Top = 263
+  Width = 282
+  Height = 304
+  ActiveControl = Memo1
+  Caption = 'Dados do Usu'#225'rio Atual'
+  Color = clBackground
+  OnCreate = FormCreate
+  PixelsPerInch = 75
+  TextHeight = 15
+  TextWidth = 7
+  object Memo1: TMemo
+    Left = 0
+    Top = 0
+    Width = 282
+    Height = 304
+    Align = alClient
+    TabOrder = 0
+  end
+end

@@ -1,0 +1,37 @@
+object Form1: TForm1
+  Left = 131
+  Top = 62
+  Width = 625
+  Height = 430
+  VertScrollBar.Range = 411
+  HorzScrollBar.Range = 601
+  ActiveControl = Button1
+  Caption = 'Captura Tela'
+  Color = clBackground
+  PixelsPerInch = 75
+  TextHeight = 13
+  TextWidth = 6
+  object Image1: TImage
+    Left = 30
+    Top = 50
+    Width = 571
+    Height = 361
+    Stretch = True
+  end
+  object Button1: TButton
+    Left = 236
+    Top = 10
+    Width = 75
+    Height = 25
+    Caption = 'Captura'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = 'BMP'
+    Filter = 'Bitmaps (*.bmp)|Todos Arquivos (*.*)'
+    Title = 'Save As'
+    Left = 56
+    Top = 16
+  end
+end

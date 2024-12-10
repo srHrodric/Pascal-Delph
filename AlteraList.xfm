@@ -1,0 +1,57 @@
+object Form1: TForm1
+  Left = 308
+  Top = 240
+  Width = 461
+  Height = 253
+  HorzScrollBar.Range = 391
+  VertScrollBar.Range = 196
+  ActiveControl = ListBox1
+  Caption = 'Alterando Valores da ListBox'
+  Color = clBackground
+  PixelsPerInch = 75
+  TextHeight = 15
+  TextWidth = 7
+  object ListBox1: TListBox
+    Left = 25
+    Top = 45
+    Width = 146
+    Height = 151
+    BorderStyle = bsRaised3d
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Left = 210
+    Top = 45
+    Width = 181
+    Height = 23
+    TabOrder = 1
+    OnKeyPress = Edit1KeyPress
+  end
+  object Button1: TButton
+    Left = 220
+    Top = 80
+    Width = 166
+    Height = 31
+    Caption = 'Adicionar Novo Item'
+    TabOrder = 2
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 220
+    Top = 120
+    Width = 166
+    Height = 31
+    Caption = 'Limpar Lista'
+    TabOrder = 3
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 220
+    Top = 160
+    Width = 166
+    Height = 31
+    Caption = 'Remover Item'
+    TabOrder = 4
+    OnClick = Button3Click
+  end
+end

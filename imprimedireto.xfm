@@ -1,0 +1,23 @@
+object Form1: TForm1
+  Left = 220
+  Top = 192
+  Width = 311
+  Height = 177
+  VertScrollBar.Range = 101
+  HorzScrollBar.Range = 193
+  ActiveControl = Button1
+  Caption = 'Imprimir Mudando Configura'#231#227'o'
+  Color = clBackground
+  PixelsPerInch = 75
+  TextHeight = 13
+  TextWidth = 6
+  object Button1: TButton
+    Left = 118
+    Top = 76
+    Width = 75
+    Height = 25
+    Caption = 'Imprimir'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+end

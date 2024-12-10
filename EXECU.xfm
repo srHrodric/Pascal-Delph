@@ -1,0 +1,22 @@
+object Form1: TForm1
+  Left = 306
+  Top = 186
+  Width = 306
+  Height = 184
+  VertScrollBar.Range = 105
+  HorzScrollBar.Range = 225
+  Caption = 'Calculadora'
+  Color = clBackground
+  PixelsPerInch = 96
+  TextHeight = 13
+  TextWidth = 6
+  object Button1: TButton
+    Left = 80
+    Top = 64
+    Width = 145
+    Height = 41
+    Caption = 'Calculadora'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+end

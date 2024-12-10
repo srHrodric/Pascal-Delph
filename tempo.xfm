@@ -1,0 +1,27 @@
+object Form1: TForm1
+  Left = 258
+  Top = 245
+  Width = 502
+  Height = 175
+  HorzScrollBar.Range = 501
+  VertScrollBar.Range = 126
+  Caption = 'Tempo Aberto'
+  Color = clBackground
+  OnCreate = FormCreate
+  PixelsPerInch = 75
+  TextHeight = 15
+  TextWidth = 7
+  object LCDNumber1: TLCDNumber
+    Left = 10
+    Top = 55
+    Width = 491
+    Height = 71
+    Digits = 8
+    Value = '1'
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 10
+    Top = 20
+  end
+end

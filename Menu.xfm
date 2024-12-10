@@ -1,0 +1,106 @@
+object Form1: TForm1
+  Left = 235
+  Top = 230
+  Width = 658
+  Height = 397
+  HorzScrollBar.Range = 491
+  VertScrollBar.Range = 311
+  ActiveControl = Edit1
+  Caption = 'Menus'
+  Color = clBackground
+  Menu = MainMenu1
+  PixelsPerInch = 75
+  TextHeight = 15
+  TextWidth = 7
+  object Image1: TImage
+    Left = 205
+    Top = 55
+    Width = 226
+    Height = 256
+    Stretch = True
+  end
+  object Edit1: TEdit
+    Left = 175
+    Top = 25
+    Width = 316
+    Height = 23
+    Alignment = taCenter
+    TabOrder = 0
+    Text = 'Sistema Com Uso de Menus'
+  end
+  object MainMenu1: TMainMenu
+    Left = 15
+    Top = 15
+    object Arquivo1: TMenuItem
+      Caption = 'Arquivo'
+      object AbrirFigura1: TMenuItem
+        Caption = 'Abrir Figura'
+        ShortCut = 16449
+        OnClick = AbrirFigura1Click
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object FecharFigura1: TMenuItem
+        Caption = 'Fechar Figura'
+        OnClick = FecharFigura1Click
+      end
+      object FecharSistema1: TMenuItem
+        Caption = 'Sair'
+        OnClick = FecharSistema1Click
+      end
+    end
+    object Editar1: TMenuItem
+      Caption = 'Editar'
+      object copiar1: TMenuItem
+        Caption = 'Copiar'
+        OnClick = copiar1Click
+      end
+      object Colar1: TMenuItem
+        Caption = 'Colar'
+        OnClick = Colar1Click
+      end
+      object Fonte1: TMenuItem
+        Caption = 'Fonte'
+        OnClick = Fonte1Click
+      end
+    end
+    object CorFundo1: TMenuItem
+      Caption = 'Cor'
+      object Corfundo2: TMenuItem
+        Caption = 'Cor do Fundo'
+        OnClick = Corfundo2Click
+      end
+      object CordaLetra1: TMenuItem
+        Caption = 'Cor da Letra'
+        OnClick = CordaLetra1Click
+      end
+    end
+    object SobreoAutor1: TMenuItem
+      Caption = 'Sobre o Autor'
+      OnClick = SobreoAutor1Click
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 
+      'Arquivos Bitmap (*.bmp)|Arquivos jpeg (*.jpg)|Arquivos de Icones' +
+      ' (*.ico)|Todas as figuras (*.ico;*.jpg;*.bmp)'
+    Title = 'Open'
+    Left = 50
+    Top = 15
+  end
+  object ColorDialog1: TColorDialog
+    Left = 85
+    Top = 15
+  end
+  object FontDialog1: TFontDialog
+    Font.Color = clBlack
+    Font.Height = 12
+    Font.Name = 'helvetica'
+    Font.Pitch = fpVariable
+    Font.Style = []
+    Font.Weight = 0
+    Left = 120
+    Top = 15
+  end
+end

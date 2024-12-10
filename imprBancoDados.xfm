@@ -1,0 +1,102 @@
+object Form1: TForm1
+  Left = 45
+  Top = 139
+  Width = 725
+  Height = 303
+  VertScrollBar.Range = 279
+  HorzScrollBar.Range = 691
+  ActiveControl = DBGrid1
+  Caption = 'Imprimindo Banco de Dados'
+  Color = clBackground
+  PixelsPerInch = 75
+  TextHeight = 13
+  TextWidth = 6
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 75
+    Width = 725
+    Height = 228
+    Align = alBottom
+    DataSource = DataSource1
+    TabOrder = 0
+    TitleFont.Color = clBlack
+    TitleFont.Height = 11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Style = []
+    TitleFont.Weight = 40
+  end
+  object Button1: TButton
+    Left = 575
+    Top = 15
+    Width = 116
+    Height = 36
+    Caption = 'Imprimir Relat'#243'rio'
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+  object SQLConnection1: TSQLConnection
+    Connected = True
+    ConnectionName = 'DelphiFacil'
+    DriverName = 'Interbase'
+    GetDriverFunc = 'getSQLDriverINTERBASE'
+    LibraryName = 'dbexpint.dll'
+    Params.Strings = (
+      'DriverName=Interbase'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'Database=c:\ProjDelphi6\Locadora.gdb'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Password=masterkey'
+      'RoleName=RoleName'
+      'ServerCharSet='
+      'SQLDialect=1'
+      'Interbase TransIsolation=ReadCommited'
+      'User_Name=sysdba'
+      'WaitOnLocks=True')
+    VendorLib = 'GDS32.DLL'
+    Left = 10
+    Top = 10
+  end
+  object SQLClientDataSet1: TSQLClientDataSet
+    Active = True
+    CommandText = 'select * from FITAS'
+    Aggregates = <>
+    Options = [poAllowCommandText]
+    ObjectView = True
+    Params = <>
+    DBConnection = SQLConnection1
+    Left = 45
+    Top = 10
+    object SQLClientDataSet1COD_FITA: TIntegerField
+      FieldName = 'COD_FITA'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object SQLClientDataSet1DESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Required = True
+      Size = 40
+    end
+    object SQLClientDataSet1OBSERVACAO: TStringField
+      FieldName = 'OBSERVACAO'
+      Size = 100
+    end
+    object SQLClientDataSet1DATA_CAD: TSQLTimeStampField
+      FieldName = 'DATA_CAD'
+    end
+    object SQLClientDataSet1TEMPO_DURA: TStringField
+      FieldName = 'TEMPO_DURA'
+      Size = 5
+    end
+    object SQLClientDataSet1COD_ESTILO: TIntegerField
+      FieldName = 'COD_ESTILO'
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLClientDataSet1
+    Left = 85
+    Top = 10
+  end
+end

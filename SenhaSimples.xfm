@@ -1,0 +1,29 @@
+object Form1: TForm1
+  Left = 59
+  Top = 99
+  Width = 689
+  Height = 313
+  Caption = 'Senha Simples'
+  Color = clBackground
+  OnShow = FormShow
+  PixelsPerInch = 75
+  TextHeight = 13
+  TextWidth = 6
+  object Label1: TLabel
+    Left = 55
+    Top = 120
+    Width = 595
+    Height = 43
+    Caption = 'Senha Correta!!! Entrada Permitida'
+    Color = clBackground
+    Font.Color = clRed
+    Font.Height = 38
+    Font.Name = 'helvetica'
+    Font.Pitch = fpVariable
+    Font.Style = []
+    Font.Weight = 40
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+end

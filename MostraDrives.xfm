@@ -1,0 +1,36 @@
+object Form1: TForm1
+  Left = 224
+  Top = 210
+  Width = 606
+  Height = 360
+  HorzScrollBar.Range = 588
+  VertScrollBar.Range = 347
+  ActiveControl = ListView1
+  Caption = 'Drives do Sistema'
+  Color = clBackground
+  OnCreate = FormCreate
+  PixelsPerInch = 75
+  TextHeight = 15
+  TextWidth = 7
+  object ListView1: TListView
+    Left = 17
+    Top = 12
+    Width = 571
+    Height = 335
+    Columns = <
+      item
+        Caption = 'Dispositivo'
+        Width = 200
+      end
+      item
+        Caption = 'Pto.Montagem'
+        Width = 200
+      end
+      item
+        Caption = 'Tipo'
+        Width = 150
+      end>
+    TabOrder = 0
+    ViewStyle = vsReport
+  end
+end

@@ -1,0 +1,187 @@
+object Form1: TForm1
+  Left = 234
+  Top = 228
+  Width = 605
+  Height = 412
+  Caption = 'Editor de Texto com Formul'#225'rios Filhos'
+  Color = clBackground
+  FormStyle = fsMDIForm
+  Menu = MainMenu1
+  Visible = True
+  PixelsPerInch = 75
+  TextHeight = 15
+  TextWidth = 7
+  object MainMenu1: TMainMenu
+    Left = 6
+    Top = 50
+    object Arquivo1: TMenuItem
+      Caption = 'Arquivo'
+      object Novo1: TMenuItem
+        Action = Novo
+      end
+      object Abrir1: TMenuItem
+        Action = Abrir
+      end
+      object SalvarComo1: TMenuItem
+        Action = Salvar
+        Caption = 'Salvar'
+      end
+      object Sair1: TMenuItem
+        Action = SalvarComo
+      end
+      object Sair2: TMenuItem
+        Action = Sair
+        Caption = '-'
+      end
+      object Sair3: TMenuItem
+        Action = Sair
+        ShortCut = 16467
+      end
+    end
+    object Editar1: TMenuItem
+      Caption = '&Editar'
+      HelpType = htContext
+      object Corta1: TMenuItem
+        Action = EditCut1
+        Caption = 'Recortar'
+      end
+      object Copia1: TMenuItem
+        Action = EditCopy1
+        Caption = 'Copiar'
+      end
+      object Cola1: TMenuItem
+        Action = EditPaste1
+        Caption = 'Colar'
+      end
+      object SelecionaTudo1: TMenuItem
+        Action = EditSelectAll1
+        Caption = 'Marcar Tudo'
+      end
+    end
+    object Janela1: TMenuItem
+      Caption = '&Janela'
+      HelpType = htContext
+      object Cascata1: TMenuItem
+        Action = WindowCascade1
+      end
+      object WindowTile11: TMenuItem
+        Action = WindowTile1
+      end
+      object MinimizaTodas1: TMenuItem
+        Action = WindowMinimizeAll1
+      end
+    end
+    object Sobre1: TMenuItem
+      Caption = 'Sobre'
+      object SobreoPrograma1: TMenuItem
+        Caption = 'Sobre o Programa'
+      end
+    end
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 46
+    Top = 50
+    object Corta2: TMenuItem
+      Action = EditCut1
+      Caption = 'Recortar'
+    end
+    object Copia2: TMenuItem
+      Action = EditCopy1
+      Caption = 'Copiar'
+    end
+    object Cola2: TMenuItem
+      Action = EditPaste1
+      Caption = 'Colar'
+    end
+  end
+  object ActionList1: TActionList
+    Left = 126
+    Top = 50
+    object Novo: TAction
+      Caption = '&Novo'
+      OnExecute = NovoExecute
+    end
+    object Abrir: TAction
+      Category = 'Arquivo'
+      Caption = '&Abrir'
+      ShortCut = 16449
+      OnExecute = AbrirExecute
+    end
+    object Salvar: TAction
+      Category = 'Arquivo'
+      Caption = 'Salvar Como'
+      ShortCut = 16467
+      OnExecute = SalvarExecute
+      OnUpdate = SalvarUpdate
+    end
+    object Sair: TAction
+      Category = 'Arquivo'
+      Caption = 'Sai&r'
+      ShortCut = 16472
+      OnExecute = Action5Execute
+    end
+    object EditCut1: TEditCut
+      Category = 'Edit'
+      Caption = 'Cu&t'
+      Hint = 'Cut'
+      ImageIndex = 0
+      ShortCut = 16472
+    end
+    object EditCopy1: TEditCopy
+      Category = 'Edit'
+      Caption = '&Copy'
+      Hint = 'Copy'
+      ImageIndex = 1
+      ShortCut = 16451
+    end
+    object EditPaste1: TEditPaste
+      Category = 'Edit'
+      Caption = '&Paste'
+      Hint = 'Paste'
+      ImageIndex = 2
+      ShortCut = 16470
+    end
+    object EditSelectAll1: TEditSelectAll
+      Category = 'Edit'
+      Caption = 'Select &All'
+    end
+    object EditDelete1: TEditDelete
+      Category = 'Edit'
+      Caption = '&Delete'
+      ImageIndex = 5
+      ShortCut = 4103
+    end
+    object WindowCascade1: TWindowCascade
+      Category = 'Window'
+      Caption = '&Cascata'
+      ImageIndex = 17
+    end
+    object WindowTile1: TWindowTile
+      Category = 'Window'
+      Caption = 'Lado a Lado'
+    end
+    object WindowMinimizeAll1: TWindowMinimizeAll
+      Category = 'Window'
+      Caption = 'Minimizar Todas'
+    end
+    object SalvarComo: TAction
+      Category = 'Arquivo'
+      Caption = 'Salvar Como'
+      OnExecute = SalvarComoExecute
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 
+      'Arquivos Pascal (*.pas)|Arquivos Texto (*.txt)|Todos os Arquivos' +
+      ' (*.*)'
+    Title = 'Abrir Arquivo'
+    Left = 161
+    Top = 50
+  end
+  object SaveDialog1: TSaveDialog
+    Filter = 'Arquivos Pascal *.pas|Arquivos Texto *.txt|Todos arquivos *.*'
+    Title = 'Salvar Como'
+    Left = 87
+    Top = 50
+  end
+end

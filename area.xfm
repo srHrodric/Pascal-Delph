@@ -1,0 +1,50 @@
+object Form1: TForm1
+  Left = 249
+  Top = 163
+  Width = 482
+  Height = 153
+  HorzScrollBar.Range = 406
+  VertScrollBar.Range = 106
+  Caption = #193'rea do C'#237'rculo'
+  Color = clBackground
+  PixelsPerInch = 75
+  TextHeight = 15
+  TextWidth = 7
+  object Button1: TButton
+    Left = 35
+    Top = 60
+    Width = 126
+    Height = 46
+    Caption = 'Calcular'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object Edit1: TEdit
+    Left = 180
+    Top = 70
+    Width = 111
+    Height = 21
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 185
+    Top = 50
+    Width = 49
+    Height = 15
+    Caption = 'Di'#226'metro'
+  end
+  object Label2: TLabel
+    Left = 305
+    Top = 50
+    Width = 27
+    Height = 15
+    Caption = #193'rea'
+  end
+  object Edit2: TEdit
+    Left = 300
+    Top = 70
+    Width = 106
+    Height = 23
+    TabOrder = 4
+  end
+end

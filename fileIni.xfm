@@ -1,0 +1,49 @@
+object Form1: TForm1
+  Left = 153
+  Top = 10
+  Width = 486
+  Height = 480
+  VertScrollBar.Range = 437
+  HorzScrollBar.Range = 408
+  ActiveControl = Button1
+  Caption = 'DBXConnections'
+  Color = clBackground
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 75
+  TextHeight = 13
+  TextWidth = 6
+  object ComboBox1: TComboBox
+    Left = 188
+    Top = 44
+    Width = 173
+    Height = 21
+    ItemHeight = 15
+    TabOrder = 0
+    OnChange = ComboBox1Change
+  end
+  object Button1: TButton
+    Left = 175
+    Top = 412
+    Width = 137
+    Height = 25
+    Caption = 'Alterar'
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+  object Label1: TLabel
+    Left = 125
+    Top = 48
+    Width = 33
+    Height = 13
+    Caption = 'Aliases'
+    Layout = tlCenter
+  end
+  object Memo1: TMemo
+    Left = 79
+    Top = 94
+    Width = 329
+    Height = 285
+    TabOrder = 3
+  end
+end
